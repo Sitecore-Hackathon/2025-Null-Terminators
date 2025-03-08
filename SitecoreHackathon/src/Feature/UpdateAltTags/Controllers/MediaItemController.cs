@@ -7,7 +7,7 @@ using Sitecore.Data.Items;
 using Sitecore.Diagnostics;
 using Sitecore.Resources.Media;
 
-namespace UpdateAltTags.Controllers
+namespace SitecoreHackathon.Feature.UpdateAltTags.Controllers
 {
     public class MediaItemController : Controller
     {
@@ -17,13 +17,12 @@ namespace UpdateAltTags.Controllers
             return View();
         }
 
-        public void ProcessMediaItems()
+        public ActionResult ProcessMediaItems()
         {
             string mediaItemPath = ConfigurationManager.AppSettings["MediaItemPath"];
             if (string.IsNullOrEmpty(mediaItemPath))
             {
                 Log.Error("MediaItemPath is not set in the configuration.", this);
-                return;
             }
 
             List<string> mediaUrls = GetMediaItemUrls(mediaItemPath);
@@ -37,6 +36,7 @@ namespace UpdateAltTags.Controllers
                     UpdateAltText(mediaItemPath, altText, db);
                 }
             }
+            return View();
         }
 
         private List<string> GetMediaItemUrls(string mediaItemPath)
