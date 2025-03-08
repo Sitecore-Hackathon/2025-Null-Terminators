@@ -67,6 +67,7 @@ namespace SitecoreHackathon.Feature.UpdateAltTags.Repository
                 Field altField = mediaItem.Fields["Alt"];
                 if (altField != null && string.IsNullOrEmpty(altField.Value))
                 {
+                    //var hostName = System.Web.HttpContext.Current.Request.Url.Host;
                     var hostName = "https://www.tvsmotor.com";
 
                     string altText = ProcessImage(hostName + MediaManager.GetMediaUrl(mediaItem));
@@ -75,7 +76,7 @@ namespace SitecoreHackathon.Feature.UpdateAltTags.Repository
                         UpdateAltText(mediaItemPath, altText, db);
                     }
                 }
-                //var hostName = System.Web.HttpContext.Current.Request.Url.Host;
+               
 
             }
             catch (Exception ex)
