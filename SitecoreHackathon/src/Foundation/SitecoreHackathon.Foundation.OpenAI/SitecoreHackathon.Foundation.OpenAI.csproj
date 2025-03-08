@@ -56,10 +56,11 @@
     </Reference>
     <Reference Include="Sitecore.Kernel, Version=18.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\..\..\..\..\inetpub\wwwroot\sc_10_newcm.dev.local\bin\Sitecore.Kernel.dll</HintPath>
+      <HintPath>bin\Sitecore.Kernel.dll</HintPath>
     </Reference>
-    <Reference Include="Sitecore.Mvc">
-      <HintPath>..\..\..\..\..\inetpub\wwwroot\sc_10_newcm.dev.local\bin\Sitecore.Mvc.dll</HintPath>
+    <Reference Include="Sitecore.Mvc, Version=9.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Sitecore.Mvc.dll</HintPath>
     </Reference>
     <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\..\..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
