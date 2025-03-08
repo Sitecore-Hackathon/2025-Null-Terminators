@@ -91,6 +91,8 @@
     <Compile Include="Controllers\MediaItemController.cs" />
     <Compile Include="PipeLines\CustomRoutes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\IMediaItemRepository.cs" />
+    <Compile Include="Repository\MediaItemRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
