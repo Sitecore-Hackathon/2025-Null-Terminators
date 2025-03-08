@@ -67,8 +67,7 @@ namespace SitecoreHackathon.Feature.UpdateAltTags.Repository
                 Field altField = mediaItem.Fields["Alt"];
                 if (altField != null && string.IsNullOrEmpty(altField.Value))
                 {
-                    //var hostName = System.Web.HttpContext.Current.Request.Url.Host;
-                    var hostName = "https://www.tvsmotor.com";
+                    var hostName = "https://"+System.Web.HttpContext.Current.Request.Url.Host;
 
                     string altText = ProcessImage(hostName + MediaManager.GetMediaUrl(mediaItem));
                     if (!string.IsNullOrEmpty(altText))
