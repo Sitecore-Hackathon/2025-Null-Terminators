@@ -6,11 +6,14 @@ using System.Threading.Tasks;
 using Sitecore.Configuration;
 using System;
 using System.Net;
+using Sitecore.Data.Items;
+using Sitecore.Data;
 
 namespace SitecoreHackathon.Foundation.OpenAI.Services
 {
     public class OpenAIIntegration
     {
+        public Database db = Factory.GetDatabase("master");
         /// <summary>
         /// Based on the Image URL, CHAT gpt will generate ALT text
         /// </summary>
@@ -20,7 +23,8 @@ namespace SitecoreHackathon.Foundation.OpenAI.Services
         {
             try
             {
-                string accessToken = Settings.GetSetting("GenAI.KeyValue");
+                Item openApiKeyItem = db.GetItem(Settings.GetSetting("OpenAI.KeyValue"));
+                string accessToken= openApiKeyItem.Fields["OpenAIKey"].Value;
                 string apiEndPoint = Settings.GetSetting("OpenAI.APIEndPoint");
                 var response = string.Empty;
                 using (var client = new HttpClient())
