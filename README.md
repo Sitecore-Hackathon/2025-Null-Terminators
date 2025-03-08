@@ -57,10 +57,15 @@ Package Path - https://github.com/Sitecore-Hackathon/2025-Null-Terminators/blob/
  
 6. **Sync PowerShell Library**  
 - Click on the **Sitecore icon** (bottom-left of the screen).
+
 ![image](https://github.com/user-attachments/assets/50cb0ba1-f848-4127-ae6e-c2a35511ffad)
+
 - Navigate to **Development Tools > PowerShell ISE**. 
+
 ![image](https://github.com/user-attachments/assets/2d5814dc-af67-4829-8875-35391367c040)
+
 - In **Settings**, click on **Rebuild All**, then select **Sync Library with Content Editor Ribbon** to add the button to the Sitecore ribbon.
+
 ![image](https://github.com/user-attachments/assets/c3a32acb-11f6-4a5f-85d5-af4484d24b8d)
 
 Once these steps are completed, your module will be fully installed and ready to use.
@@ -71,11 +76,18 @@ Once the module is installed, follow these steps to use it effectively:
 ### 1. **PowerShell Integration**  
 
 - Click on the **Sitecore icon** (bottom-left of the screen).
-![image](https://github.com/user-attachments/assets/ba67c0ce-a550-4430-a06c-e4fbf84ad4ab)
+
+![image](https://github.com/user-attachments/assets/79c9388f-38d2-4cfa-990c-012ac6a062a1)
+
+
 - Navigate to **Development Tools > PowerShell ISE**. 
+
 ![image](https://github.com/user-attachments/assets/ce55c945-95d6-4738-97af-831c8327aa7d)
+
 - In the PowerShell ISE, the module's script is available for execution.
+
 - If needed, go to **Settings > Rebuild All > Sync Library with Content Editor Ribbon** to ensure the button appears in the ribbon.
+
 ![image](https://github.com/user-attachments/assets/80027cbf-5e85-4dfe-95ac-772b6daf9c72)
  
 ### 2. **Accessing the Module**  
@@ -83,6 +95,7 @@ Once the module is installed, follow these steps to use it effectively:
 - Open the **Sitecore Content Editor**.  
 - Navigate to the **Configure** tab in the Sitecore ribbon.  
 - Locate the **"Alt Tags Update"** button, which was installed as part of the package. 
+
 ![image](https://github.com/user-attachments/assets/6b565b60-1133-4896-a6da-26220e2a9f12)
 
 ### 3. **Updating Alt Text for Media Items**  
@@ -90,14 +103,19 @@ Once the module is installed, follow these steps to use it effectively:
 - Select any media item (e.g., images) in the **Media Library**.  
 - Click the **"Alt Tags Update"** button in the ribbon.  
 - The module will use **OpenAI API** to generate and update meaningful alt text based on the image content.
-![image](https://github.com/user-attachments/assets/88e852cc-e591-45a9-b660-b3e31e23a98c)
+
+![image](https://github.com/user-attachments/assets/189cdfd6-d505-4292-89d7-2277393f15f6)
+
 - If an item does not contain the Alt text field or if it already has text present, a prompt will appear stating: **"No Action Needed. Alt text is either already present or the field does not exist."**
+
 ![image](https://github.com/user-attachments/assets/77590483-489f-416c-afe2-03955086dc8f)
  
 With these steps, users can easily access the module to enhance accessibility and SEO by automatically generating meaningful alt text for media items.
+**Note:** The code will not function in a local environment because OpenAI cannot access the image item path from the local site.
  
 ![Hackathon Logo](docs/images/hackathon.png?raw=true "Hackathon Logo")
+
 ![image](https://github.com/user-attachments/assets/7fb3c0a1-7537-4c16-9359-7e25e33d866f)
  
 ## Comments
-If you'd like to make additional comments that is important for your module entry.
+**Note:** The code will not function in a local environment because OpenAI cannot access the image item path from the local site.
