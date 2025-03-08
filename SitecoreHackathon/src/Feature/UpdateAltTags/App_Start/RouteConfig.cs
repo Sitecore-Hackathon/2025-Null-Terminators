@@ -16,7 +16,7 @@ namespace SitecoreHackathon.Feature.UpdateAltTags.App_Start
             routes.MapRoute(
                 name: "UpdateAltText",
                 url: "api/UpdateAltText",
-                defaults: new { controller = "MediaItemController", action = "ProcessMediaItems", id = UrlParameter.Optional },
+                defaults: new { controller = "MediaItem", action = "ProcessMediaItems", id = UrlParameter.Optional },
                 namespaces: new[] { "SitecoreHackathon.Feature.UpdateAltTags.Controllers" }
             );
         }

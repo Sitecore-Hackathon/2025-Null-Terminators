@@ -38,7 +38,7 @@ namespace SitecoreHackathon.Feature.UpdateAltTags.Controllers
                 return new JsonResult { Data = new { Success = false } };
             }
 
-            return IdentifyMediaItemandUpdateAltTags(mediaItemPath);
+            return Json(IdentifyMediaItemandUpdateAltTags(mediaItemPath), JsonRequestBehavior.AllowGet);
         }
 
         private JsonResult IdentifyMediaItemandUpdateAltTags(string mediaItemPath)
