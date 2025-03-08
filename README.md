@@ -112,7 +112,8 @@ Once the module is installed, follow these steps to use it effectively:
 ![image](https://github.com/user-attachments/assets/77590483-489f-416c-afe2-03955086dc8f)
  
 With these steps, users can easily access the module to enhance accessibility and SEO by automatically generating meaningful alt text for media items.
-**Note:** **The code will not function in a local environment because OpenAI cannot access the image item path from the local site.Please deploy the dlls and the configs on a hosted environment**
+
+**Note:** **The code will not function in a local environment because OpenAI cannot access the image item path from the local site. Please deploy the dlls and the configs on a hosted environment**
  
 ![Hackathon Logo](docs/images/hackathon.png?raw=true "Hackathon Logo")
 
