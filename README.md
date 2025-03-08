@@ -21,13 +21,12 @@ We have developed a custom Sitecore module that:
 4. Updates the Alt field of images where alt text is missing.
  
 ## Video link
-⟹ Provide a video highlighing your Hackathon module submission and provide a link to the video. You can use any video hosting, file share or even upload the video to this repository. _Just remember to update the link below_
- 
-⟹ [Replace this Video link](#video-link)
+Youtube Video Link - https://youtu.be/VsrqZVZarZ8
  
 ## Pre-requisites and Dependencies
 - SPE Module Installation for Sitecore 10.X  
 - Sitecore Package Installation for Custom Button Implementation
+- Updating $url path in Powershell Script
  
 ## Installation instructions  
 Follow the steps below to install and set up the module:  
@@ -47,6 +46,8 @@ Follow the steps below to install and set up the module:
 4. **Install the Sitecore Package**  
 - Use the **Sitecore Installation Wizard** to install the provided package.  
 Package Path - https://github.com/Sitecore-Hackathon/2025-Null-Terminators/blob/feature/SitecoreHackathon/SitecoreHackathon_NullTerminators.zip
+- **NOTE** - **In the PowerShell script located at the item path -"/sitecore/system/Modules/PowerShell/Script Library/Sitecore Hackathon/Content Editor/Ribbon/Configure/Alt Tags Update/Alt Tags Update", update the `$url` variable to match your website's domain while keeping the extension unchanged.  
+For example:  $url = "<your_site_domain>/api/UpdateAltText?mediaItemPath=$itemPath"**
 - This package will create a **custom button** with name **Alt Tags Update** under the **Configure** tab in the Sitecore ribbon, allowing users to update alt text for media items.  
  
 5. **Verify Installed Items**  
@@ -111,11 +112,11 @@ Once the module is installed, follow these steps to use it effectively:
 ![image](https://github.com/user-attachments/assets/77590483-489f-416c-afe2-03955086dc8f)
  
 With these steps, users can easily access the module to enhance accessibility and SEO by automatically generating meaningful alt text for media items.
-**Note:** The code will not function in a local environment because OpenAI cannot access the image item path from the local site.
+**Note:** **The code will not function in a local environment because OpenAI cannot access the image item path from the local site.Please deploy the dlls and the configs on a hosted environment**
  
 ![Hackathon Logo](docs/images/hackathon.png?raw=true "Hackathon Logo")
 
 ![image](https://github.com/user-attachments/assets/7fb3c0a1-7537-4c16-9359-7e25e33d866f)
  
 ## Comments
-**Note:** The code will not function in a local environment because OpenAI cannot access the image item path from the local site.
+**Note:** **The code will not function in a local environment because OpenAI cannot access the image item path from the local site. Please deploy the dlls and the configs on a hosted environment.**
