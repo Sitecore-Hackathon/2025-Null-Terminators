@@ -31,7 +31,7 @@ namespace SitecoreHackathon.Feature.UpdateAltTags.Controllers
         [HttpGet]
         public JsonResult ProcessMediaItems(string mediaItemPath)
         {
-            mediaItemPath = Settings.GetSetting("UpdateAltTags.ImagePath");
+            //mediaItemPath = Settings.GetSetting("UpdateAltTags.ImagePath");
             if (string.IsNullOrEmpty(mediaItemPath))
             {
                 Log.Error("MediaItemPath is not set in the configuration.", this);
