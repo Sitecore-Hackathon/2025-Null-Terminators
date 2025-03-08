@@ -20,7 +20,7 @@ namespace SitecoreHackathon.Foundation.OpenAI.Services
         {
             try
             {
-                string accessToken = Settings.GetSetting("OpenAI.ApiKey");
+                string accessToken = Settings.GetSetting("GenAI.KeyValue");
                 string apiEndPoint = Settings.GetSetting("OpenAI.APIEndPoint");
                 var response = string.Empty;
                 using (var client = new HttpClient())
