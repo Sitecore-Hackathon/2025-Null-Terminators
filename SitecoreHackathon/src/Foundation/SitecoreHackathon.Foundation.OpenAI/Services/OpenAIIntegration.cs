@@ -16,7 +16,7 @@ namespace SitecoreHackathon.Foundation.OpenAI.Services
         /// </summary>
         /// <param name="ImageURL"></param>
         /// <returns></returns>
-        public async Task<string> AltTextGeneration(string ImageURL)
+        public string AltTextGeneration(string ImageURL)
         {
             try
             {
@@ -27,10 +27,10 @@ namespace SitecoreHackathon.Foundation.OpenAI.Services
                 {
                     client.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", accessToken);
 
-                    var jsonContent = JsonConvert.SerializeObject(GenerateOpenAIImageAltTextRequest.GenerateRequest(ImageURL));
+                    var jsonContent = JsonConvert.SerializeObject(GenerateOpenAIImageAltTextRequest.GenerateRequest(ImageURL)).ToLower();
                     var content = new StringContent(jsonContent, System.Text.Encoding.UTF8, "application/json");
 
-                    var res = await client.PostAsync(apiEndPoint, content);
+                    var res = client.PostAsync(apiEndPoint, content).Result;
                     if(res.StatusCode==HttpStatusCode.OK)
                     {
                         response = res.Content.ReadAsStringAsync().Result.ToString();

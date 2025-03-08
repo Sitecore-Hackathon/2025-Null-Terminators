@@ -1,4 +1,5 @@
-﻿using SitecoreHackathon.Foundation.OpenAI.Models.GenerateOpenAIRequest;
+﻿using Sitecore.Configuration;
+using SitecoreHackathon.Foundation.OpenAI.Models.GenerateOpenAIRequest;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -23,10 +24,10 @@ namespace SitecoreHackathon.Foundation.OpenAI.Helpers
             {
                 GenerateOpenAIRequest request = new GenerateOpenAIRequest
                 {
-                    MaxTokens = 200,
-                    Store = true,
-                    Model = "gpt-4o",
-                    Messages = OpenAIAltTextPrompt(userInputDetails)
+                    Max_Tokens = Convert.ToInt32(Settings.GetSetting("OpenAI.MaxTokens")),
+                    Store = Convert.ToBoolean(Settings.GetSetting("OpenAI.Store")),
+                    Model = Settings.GetSetting("OpenAI.Model"),
+                    messages = OpenAIAltTextPrompt(userInputDetails)
                 };
                 return request;
             }
@@ -43,7 +44,7 @@ namespace SitecoreHackathon.Foundation.OpenAI.Helpers
         /// <param name="ImageURL"></param>
         /// <returns></returns>
 
-        private static Messages OpenAIAltTextPrompt(string ImageURL)
+        private static List<Messages> OpenAIAltTextPrompt(string ImageURL)
         {
             try
             {
@@ -52,23 +53,27 @@ namespace SitecoreHackathon.Foundation.OpenAI.Helpers
                     Url = ImageURL
                 };
 
-                Messages messages = new Messages();
-                messages.Role = "user";
-                Content TextPrompt = new Content
+                List<Messages> listOfMessages = new List<Messages>();
+                Messages message = new Messages();
+                message.Role = Settings.GetSetting("OpenAI.Role");
+                message.Content = new List<Object>();
+                TextContent TextPrompt = new TextContent
                 {
-                    Type = "text",
-                    Text = "Suggest ALT tags in less than 5 words"
+                    Type = Settings.GetSetting("OpenAI.TextPromptLabel"),
+                    Text = Settings.GetSetting("OpenAI.TextPrompt"),
                 };
 
-                Content ImageUrlPromt = new Content
+                ImageContent ImageUrlPromt = new ImageContent
                 {
-                    Type = "image_url",
-                    ImageUrl = imageUrlContent
+                    Type = Settings.GetSetting("OpenAI.ImageUrlPromptLabel"),
+                    Image_Url = imageUrlContent
                 };
-                messages.Content.Add(TextPrompt);
-                messages.Content.Add(ImageUrlPromt);
+                message.Content.Add(TextPrompt);
+                message.Content.Add(ImageUrlPromt);
 
-                return messages;
+                listOfMessages.Add(message);
+
+                return listOfMessages;
             }
             catch(Exception ex)
             {

@@ -52,7 +52,8 @@
       <HintPath>..\..\..\packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="OpenAI, Version=2.1.0.0, Culture=neutral, PublicKeyToken=b4187f3e65366280, processorArchitecture=MSIL">
-      <HintPath>..\..\..\packages\OpenAI.2.1.0\lib\netstandard2.0\OpenAI.dll</HintPath>
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\OpenAI.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Kernel, Version=18.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>

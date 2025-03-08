@@ -10,20 +10,26 @@ namespace SitecoreHackathon.Foundation.OpenAI.Models.GenerateOpenAIRequest
 	{
         public string Model { get; set; }
         public bool Store { get; set; }
-        public Messages Messages { get; set; }
-        public int MaxTokens { get; set; }
+        public List<Messages> messages { get; set; }
+        public int Max_Tokens { get; set; }
     }
     public class Messages
     {
         public string Role { get; set; }
-        public List<Content> Content { get; set; }
+        public List<Object> Content { get; set; }
     }
 
-    public class Content
+    public class TextContent
     {
         public string Type { get; set; }
         public string Text { get; set; }
-        public ImageUrlContent ImageUrl { get; set; }
+       
+    }
+
+    public class ImageContent
+    {
+        public string Type { get; set; }
+        public ImageUrlContent Image_Url { get; set; }
     }
 
     public class ImageUrlContent
