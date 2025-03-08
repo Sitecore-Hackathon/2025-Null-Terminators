@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Feature", "Feature", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project", "Project", "{8BC88345-C00E-442B-8063-461DBAB4D797}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{72DC17E2-7719-4E69-A03A-BC49594F617D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configuration", "{676B4DDB-EEEC-42A6-AD3F-5071F2F1DA89}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitecoreHackathon.Feature.UpdateAltTags", "src\Feature\UpdateAltTags\SitecoreHackathon.Feature.UpdateAltTags.csproj", "{17323A4C-1BE8-4346-8437-E6E92C8D9AFA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SitecoreHackathon.Foundation.OpenAI", "src\Foundation\SitecoreHackathon.Foundation.OpenAI\SitecoreHackathon.Foundation.OpenAI.csproj", "{C3268065-64D8-4D13-868E-867A2F4634FE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{17323A4C-1BE8-4346-8437-E6E92C8D9AFA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17323A4C-1BE8-4346-8437-E6E92C8D9AFA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17323A4C-1BE8-4346-8437-E6E92C8D9AFA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17323A4C-1BE8-4346-8437-E6E92C8D9AFA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3268065-64D8-4D13-868E-867A2F4634FE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3268065-64D8-4D13-868E-867A2F4634FE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3268065-64D8-4D13-868E-867A2F4634FE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3268065-64D8-4D13-868E-867A2F4634FE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{17323A4C-1BE8-4346-8437-E6E92C8D9AFA} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{C3268065-64D8-4D13-868E-867A2F4634FE} = {72DC17E2-7719-4E69-A03A-BC49594F617D}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2A84A930-409A-4382-BE95-97EC269A2B6D}
+	EndGlobalSection
+EndGlobal
